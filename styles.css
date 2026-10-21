@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CarTenDayApp</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Road Ready</p>
+          <h1>CarTenDayApp</h1>
+        </div>
+        <button id="resetButton" class="ghost-button" type="button">Reset plan</button>
+      </header>
+
+      <main class="dashboard">
+        <section class="hero card">
+          <div>
+            <p class="label">Vehicle overview</p>
+            <h2 id="vehicleName">Toyota Corolla</h2>
+            <p id="vehicleSummary">A 10-day readiness plan to keep your car reliable, clean, and road-safe.</p>
+          </div>
+          <div class="stats">
+            <div>
+              <span>Days left</span>
+              <strong id="daysLeft">10</strong>
+            </div>
+            <div>
+              <span>Tasks done</span>
+              <strong id="tasksDone">0</strong>
+            </div>
+            <div>
+              <span>Progress</span>
+              <strong id="progressValue">0%</strong>
+            </div>
+          </div>
+        </section>
+
+        <section class="card form-card">
+          <h3>Update your car details</h3>
+          <form id="vehicleForm">
+            <div class="field-row">
+              <label>
+                Make
+                <input id="makeInput" name="make" type="text" value="Toyota" />
+              </label>
+              <label>
+                Model
+                <input id="modelInput" name="model" type="text" value="Corolla" />
+              </label>
+            </div>
+            <div class="field-row">
+              <label>
+                Current mileage
+                <input id="mileageInput" name="mileage" type="number" value="12500" min="0" />
+              </label>
+              <label>
+                Service reminder
+                <input id="serviceInput" name="service" type="date" value="2026-10-30" />
+              </label>
+            </div>
+            <button type="submit" class="primary-button">Save vehicle</button>
+          </form>
+        </section>
+
+        <section class="card list-card">
+          <div class="list-header">
+            <h3>10-day maintenance checklist</h3>
+            <button id="toggleAllButton" class="secondary-button" type="button">Mark all complete</button>
+          </div>
+          <ul id="taskList" class="task-list" aria-live="polite"></ul>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
