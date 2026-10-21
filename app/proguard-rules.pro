@@ -1,0 +1,1 @@
+-keep class com.ngmango7.cartendayapp.** { *; }
